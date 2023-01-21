@@ -1,0 +1,6 @@
+!dist/*
+!templates/*
+/src
+/tsconfig.json
+/.editorconfig
+node_modules

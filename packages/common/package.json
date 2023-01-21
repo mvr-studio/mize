@@ -1,0 +1,7 @@
+{
+  "name": "@getmize/common",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Tomek Marciniak",
+  "license": "MIT"
+}

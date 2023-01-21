@@ -1,0 +1,10 @@
+{
+	"extends": "@getmize/common/tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"jsx": "react",
+		"module": "ESNext",
+		"moduleResolution": "Node"
+	},
+	"include": ["src"]
+}

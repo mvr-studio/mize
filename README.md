@@ -1,73 +1,57 @@
-# Turborepo starter
+# Mize: Lambda-esque functions
 
-This is an official Yarn v1 starter turborepo.
+This tiny server allows you to create function handlers that will act like Next.js API routes - without Next.js.
 
-## What's inside?
+Routing is file system based, so all you have to do is to create a new file for a route in `/src/api`.
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. It includes the following packages/apps:
+## Installation
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run build
+```sh
+$ npx create-mize-app app-name
 ```
 
-### Develop
+## Usage
 
-To develop all apps and packages, run the following command:
+Development server:
 
-```
-cd my-turborepo
-yarn run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```sh
+$ yarn dev
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+Build dist version:
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
+```sh
+$ yarn build
 ```
 
-## Useful Links
+Start dist version server:
 
-Learn more about the power of Turborepo:
+```sh
+$ yarn start
+```
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+## Features
+
+### Routing
+
+Routing is file system based. Thanks to [jesseditson/fs-router](https://github.com/jesseditson/fs-router#usage).
+
+### Security
+
+Secure your API easily by setting the `MIZE_API_KEY` environmental variable.
+Then send your requests with `Authorization` header like: `Mize [MIZE_API_KEY]`.
+
+## Deployment
+
+### Dockerfile
+
+Run locally:
+
+```sh
+$ docker build -t mize .
+$ docker run -p 3000:3000 mize
+```
+
+### Heroku and Herokuish
+
+The repo contains `Procfile`, so you're good to deploy it to Heroku.
