@@ -10,6 +10,12 @@ Routing is file system based, so all you have to do is to create a new file for 
 $ npx create-mize-app app-name
 ```
 
+or
+
+```sh
+$ yarn create mize-app app-name
+```
+
 ## Usage
 
 Development server:
