@@ -12,7 +12,7 @@
 */
 import { MizeRequestHandler, send } from '@getmize/core'
 
-const handler: MizeRequestHandler = (req: any, res) => {
+const handler: MizeRequestHandler = (req, res) => {
   send(res, 200, { params: req.params, query: req.query })
 }
 
