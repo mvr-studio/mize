@@ -9,10 +9,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@getmize/core@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@getmize/core/-/core-0.0.1.tgz#a1220e2ff3dd63e50c738712aa624ae799aa2619"
-  integrity sha512-DTf1Ds4hrJbKhCXw+dYECUZTq7marbN/S/5gtM1OXbQKsl+bGbUZoU66/pi55QCPWsTxKdK3OyEjNT4u++wpmQ==
+"@getmize/core@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@getmize/core/-/core-0.0.3.tgz#c40935e4538aef8f1c8698102db26dc67f9148e5"
+  integrity sha512-t42+9K75/Zdd2pG/ZOpSLUbw49Tdo0FPN+bGWLF1jGhfl3YjqcQty/i0BH4dSExXunOpv3h48km0d7+xDNZAjw==
   dependencies:
     dotenv "^16.0.3"
     fs-router "^0.5.0"
@@ -55,6 +55,11 @@
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
+
+"@types/node@^18.11.18":
+  version "18.11.18"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
+  integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
 
 abbrev@1:
   version "1.1.1"

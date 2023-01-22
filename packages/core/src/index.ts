@@ -1,6 +1,15 @@
 require('dotenv').config()
-import http from 'http'
+import http, { IncomingMessage, ServerResponse } from 'http'
 import { send, serve, RequestHandler } from 'micro'
+
+interface MizeIncomingMessage extends IncomingMessage {
+  params: Record<string, string>
+  query: Record<string, string>
+}
+export type MizeRequestHandler = (
+  req: MizeIncomingMessage,
+  res: ServerResponse
+) => unknown
 
 const API_ROUTES_DIR =
   process.env.MIZE_MODE === 'dev' ? '/src/api' : '/dist/api'
@@ -18,6 +27,8 @@ const serverHandler: RequestHandler = (req, res) => {
   return matched(req, res)
 }
 
+/**
+ * `server` instance exported to run the listener in an app.
+ */
 export const server = new http.Server(serve(serverHandler))
-
-// server.listen(process.env.PORT || 3000)
+export { send, text, json, buffer } from 'micro'

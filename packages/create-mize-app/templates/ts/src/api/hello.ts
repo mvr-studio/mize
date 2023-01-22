@@ -1,6 +1,6 @@
-import { RequestHandler, send } from 'micro'
+import { MizeRequestHandler, send } from '@getmize/core'
 
-const handler: RequestHandler = (_, res) => {
+const handler: MizeRequestHandler = (_, res) => {
 	send(res, 200, { name: 'John Doe' })
 }
 

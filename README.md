@@ -41,6 +41,10 @@ Routing is file system based. Thanks to [jesseditson/fs-router](https://github.c
 Secure your API easily by setting the `MIZE_API_KEY` environmental variable.
 Then send your requests with `Authorization` header like: `Mize [MIZE_API_KEY]`.
 
+## Example
+
+Please referr to [apps/example-app](https://github.com/mvr-studio/mize/tree/main/apps/example-app)
+
 ## Deployment
 
 ### Dockerfile

@@ -1,6 +1,6 @@
 {
   "name": "@getmize/core",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Tomasz Marciniak <tomek@mvr.studio>",
@@ -11,7 +11,6 @@
     "start": "node ./dist/index.js"
   },
   "devDependencies": {
-    "@types/micro": "^7.3.7",
     "@types/node": "^18.11.18",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.3",

@@ -1,7 +1,14 @@
-import { RequestHandler, send } from 'micro'
+/*
+  URL: http://localhost:3000/hello
+  Response:
+    {
+      "name": "John Doe"
+    }
+*/
+import { MizeRequestHandler, send } from '@getmize/core'
 
-const handler: RequestHandler = (_, res) => {
-	send(res, 200, { name: 'John Doe' })
+const handler: MizeRequestHandler = (_, res) => {
+  send(res, 200, { name: 'John Doe' })
 }
 
 export default handler
